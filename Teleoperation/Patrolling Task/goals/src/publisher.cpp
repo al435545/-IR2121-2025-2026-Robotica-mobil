@@ -20,10 +20,8 @@ geometry_msgs::msg::Quaternion euler_to_quaternion(double yaw) {
  * @brief Función principal que ejecuta el nodo.
  */
 void send_goal(int argc, char * argv[]) {
-    // 1. Inicializar ROS 2
     rclcpp::init(argc, argv);
     
-    // 2. Crear un nodo
     auto node = std::make_shared<rclcpp::Node>("version1_goal_publisher");
 
     // 3. Crear el publicador para el tópico /goal_pose
