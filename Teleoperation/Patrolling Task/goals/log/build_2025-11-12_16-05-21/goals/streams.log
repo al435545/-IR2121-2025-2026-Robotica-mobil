@@ -1,0 +1,8 @@
+[0.035s] Invoking command in '/home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Teleoperation/Patrolling Task/goals/build/goals': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Teleoperation/Patrolling Task/goals/build/goals -- -j6 -l6
+[0.175s] [35m[1mConsolidate compiler generated dependencies of target publisher[0m
+[0.259s] [ 50%] [32m[1mLinking CXX executable publisher[0m
+[1.993s] gmake[2]: *** Se borra el archivo 'publisher'
+[1.994s] gmake[2]: *** [CMakeFiles/publisher.dir/build.make:197: publisher] Interrupción
+[1.995s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/publisher.dir/all] Interrupción
+[1.995s] gmake: *** [Makefile:146: all] Interrupción
+[1.996s] Invoked command in '/home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Teleoperation/Patrolling Task/goals/build/goals' returned '-2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Teleoperation/Patrolling Task/goals/build/goals -- -j6 -l6

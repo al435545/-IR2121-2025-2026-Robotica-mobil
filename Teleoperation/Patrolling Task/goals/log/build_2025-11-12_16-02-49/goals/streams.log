@@ -1,0 +1,15 @@
+[0.029s] Invoking command in '/home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Teleoperation/Patrolling Task/goals/build/goals': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Teleoperation/Patrolling Task/goals/build/goals -- -j6 -l6
+[0.148s] [35m[1mConsolidate compiler generated dependencies of target publisher[0m
+[0.217s] [ 50%] [32mBuilding CXX object CMakeFiles/publisher.dir/src/publisher.cpp.o[0m
+[2.320s] [01m[K/home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Teleoperation/Patrolling Task/goals/src/publisher.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[2.320s] [01m[K/home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Teleoperation/Patrolling Task/goals/src/publisher.cpp:49:8:[m[K [01;35m[Kwarning: [m[Klabel ‘[01m[Krclcpp[m[K’ defined but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-label-Wunused-label]8;;[m[K]
+[2.320s]    49 |        [01;35m[Krclcpp[m[K:spin_some(node);
+[2.320s]       |        [01;35m[K^~~~~~[m[K
+[64.685s] [100%] [32m[1mLinking CXX executable publisher[0m
+[112.447s] gmake[2]: *** Se borra el archivo 'publisher'
+[112.447s] gmake[2]: *** wait: No hay ningún proceso hijo.  Alto.
+[112.447s] gmake[2]: *** Se espera a que terminen otras tareas....
+[112.447s] gmake[2]: *** wait: No hay ningún proceso hijo.  Alto.
+[112.447s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/publisher.dir/all] Error 2
+[112.447s] gmake: *** [Makefile:146: all] Interrupción
+[112.449s] Invoked command in '/home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Teleoperation/Patrolling Task/goals/build/goals' returned '-2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Teleoperation/Patrolling Task/goals/build/goals -- -j6 -l6

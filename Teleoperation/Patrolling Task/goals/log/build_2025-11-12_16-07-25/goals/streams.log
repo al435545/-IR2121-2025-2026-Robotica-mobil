@@ -1,0 +1,29 @@
+[0.029s] Invoking command in '/home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Teleoperation/Patrolling Task/goals/build/goals': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Teleoperation/Patrolling Task/goals/build/goals -- -j6 -l6
+[0.207s] [ 50%] [32mBuilding CXX object CMakeFiles/publisher.dir/src/publisher.cpp.o[0m
+[2.247s] [01m[K/home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Teleoperation/Patrolling Task/goals/src/publisher.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[2.248s] [01m[K/home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Teleoperation/Patrolling Task/goals/src/publisher.cpp:48:8:[m[K [01;35m[Kwarning: [m[Klabel ‘[01m[Krclcpp[m[K’ defined but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-label-Wunused-label]8;;[m[K]
+[2.248s]    48 |        [01;35m[Krclcpp[m[K:spin_some(node);
+[2.248s]       |        [01;35m[K^~~~~~[m[K
+[64.020s] [100%] [32m[1mLinking CXX executable publisher[0m
+[116.301s] [100%] Built target publisher
+[116.314s] Invoked command in '/home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Teleoperation/Patrolling Task/goals/build/goals' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Teleoperation/Patrolling Task/goals/build/goals -- -j6 -l6
+[116.333s] Invoking command in '/home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Teleoperation/Patrolling Task/goals/build/goals': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Teleoperation/Patrolling Task/goals/build/goals
+[116.345s] -- Install configuration: ""
+[116.496s] -- Installing: /home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Teleoperation/Patrolling Task/goals/install/goals/lib/goals/publisher
+[117.040s] -- Set runtime path of "/home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Teleoperation/Patrolling Task/goals/install/goals/lib/goals/publisher" to ""
+[117.041s] -- Up-to-date: /home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Teleoperation/Patrolling Task/goals/install/goals/share/ament_index/resource_index/package_run_dependencies/goals
+[117.041s] -- Up-to-date: /home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Teleoperation/Patrolling Task/goals/install/goals/share/ament_index/resource_index/parent_prefix_path/goals
+[117.041s] -- Up-to-date: /home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Teleoperation/Patrolling Task/goals/install/goals/share/goals/environment/ament_prefix_path.sh
+[117.041s] -- Up-to-date: /home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Teleoperation/Patrolling Task/goals/install/goals/share/goals/environment/ament_prefix_path.dsv
+[117.041s] -- Up-to-date: /home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Teleoperation/Patrolling Task/goals/install/goals/share/goals/environment/path.sh
+[117.041s] -- Up-to-date: /home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Teleoperation/Patrolling Task/goals/install/goals/share/goals/environment/path.dsv
+[117.041s] -- Up-to-date: /home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Teleoperation/Patrolling Task/goals/install/goals/share/goals/local_setup.bash
+[117.041s] -- Up-to-date: /home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Teleoperation/Patrolling Task/goals/install/goals/share/goals/local_setup.sh
+[117.041s] -- Up-to-date: /home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Teleoperation/Patrolling Task/goals/install/goals/share/goals/local_setup.zsh
+[117.041s] -- Up-to-date: /home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Teleoperation/Patrolling Task/goals/install/goals/share/goals/local_setup.dsv
+[117.041s] -- Installing: /home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Teleoperation/Patrolling Task/goals/install/goals/share/goals/package.dsv
+[117.044s] -- Up-to-date: /home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Teleoperation/Patrolling Task/goals/install/goals/share/ament_index/resource_index/packages/goals
+[117.044s] -- Up-to-date: /home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Teleoperation/Patrolling Task/goals/install/goals/share/goals/cmake/goalsConfig.cmake
+[117.044s] -- Up-to-date: /home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Teleoperation/Patrolling Task/goals/install/goals/share/goals/cmake/goalsConfig-version.cmake
+[117.045s] -- Up-to-date: /home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Teleoperation/Patrolling Task/goals/install/goals/share/goals/package.xml
+[117.047s] Invoked command in '/home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Teleoperation/Patrolling Task/goals/build/goals' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Teleoperation/Patrolling Task/goals/build/goals

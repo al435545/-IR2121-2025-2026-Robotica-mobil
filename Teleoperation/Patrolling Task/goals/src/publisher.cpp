@@ -12,21 +12,22 @@ geometry_msgs::msg::Quaternion euler_to_quaternion(double yaw) {
     return tf2::toMsg(q);
 }
 
-void send_goal(int argc, char * argv[]) {
+
+
+int main(int argc, char * argv[]) {
     rclcpp::init(argc, argv);
     
     auto node = std::make_shared<rclcpp::Node>("version1_goal_publisher");
 
     auto publisher = node->create_publisher<PoseStamped>("/goal_pose", 10);
     
-    double TARGET_X = -1.0;
-    double TARGET_Y = 3.0;
+    double TARGET_X = -0.4019;
+    double TARGET_Y = 7.59398;
     double TARGET_YAW = 0.0;
 
     auto goal_msg = PoseStamped();
     
     goal_msg.header.frame_id = "map";
-    // Usar el tiempo actual para el timestamp
     goal_msg.header.stamp = node->now(); 
     
     goal_msg.pose.position.x = TARGET_X;
@@ -37,17 +38,16 @@ void send_goal(int argc, char * argv[]) {
 
     RCLCPP_INFO(node->get_logger(), "Publicando objetivo a: (X: %.2f, Y: %.2f)", TARGET_X, TARGET_Y);
 
-    publisher->publish(goal_msg);
-    
-    //rclcpp::sleep_for(std::chrono::milliseconds(500));
+  
+    rclcpp::sleep_for(std::chrono::milliseconds(500));
 
     RCLCPP_INFO(node->get_logger(), "Objetivo publicado. El nodo finalizará ahora (Versión 1).");
-
+	
+    while(rclcpp::ok()){
+    	  publisher->publish(goal_msg);
+    	  rclcpp:spin_some(node);
+    }
     rclcpp::shutdown();
-}
-
-int main(int argc, char * argv[]) {
-    send_goal(argc, argv);
     return 0;
 }
 
