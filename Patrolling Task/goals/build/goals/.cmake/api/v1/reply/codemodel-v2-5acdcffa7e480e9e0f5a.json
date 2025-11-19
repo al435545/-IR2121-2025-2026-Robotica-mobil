@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-0c13443609582e6ddd3e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "goals",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "goals_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-goals_uninstall-51dd22356b825649f4dc.json",
+					"name" : "goals_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-28375c160fe8267fa230.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "version2_publisher::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-version2_publisher-563c9be51084eaf59e2e.json",
+					"name" : "version2_publisher",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/build/goals",
+		"source" : "/home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

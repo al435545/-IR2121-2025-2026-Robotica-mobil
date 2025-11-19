@@ -1,0 +1,11 @@
+[0.011s] Invoking command in '/home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/build/goals': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/build/goals -- -j6 -l6
+[0.065s] [35m[1mConsolidate compiler generated dependencies of target version2_publisher[0m
+[0.097s] [ 50%] [32mBuilding CXX object CMakeFiles/version2_publisher.dir/src/publisher.cpp.o[0m
+[2.118s] [01m[K/home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/src/publisher.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[2.118s] [01m[K/home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/src/publisher.cpp:83:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kloop_rate[m[K’ was not declared in this scope
+[2.118s]    83 |         [01;31m[Kloop_rate[m[K.sleep();
+[2.118s]       |         [01;31m[K^~~~~~~~~[m[K
+[4.124s] gmake[2]: *** [CMakeFiles/version2_publisher.dir/build.make:76: CMakeFiles/version2_publisher.dir/src/publisher.cpp.o] Error 1
+[4.125s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/version2_publisher.dir/all] Error 2
+[4.125s] gmake: *** [Makefile:146: all] Error 2
+[4.127s] Invoked command in '/home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/build/goals' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/build/goals -- -j6 -l6

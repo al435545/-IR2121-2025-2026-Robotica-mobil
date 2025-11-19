@@ -1,4 +1,0 @@
-gmake[2]: *** Se borra el archivo 'publisher'
-gmake[2]: *** [CMakeFiles/publisher.dir/build.make:197: publisher] Interrupción
-gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/publisher.dir/all] Interrupción
-gmake: *** [Makefile:146: all] Interrupción

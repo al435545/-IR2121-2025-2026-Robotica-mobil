@@ -1,0 +1,11 @@
+[0.010s] Invoking command in '/home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/build/goals': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/build/goals -- -j6 -l6
+[0.068s] [35m[1mConsolidate compiler generated dependencies of target publisher[0m
+[0.090s] [ 50%] [32mBuilding CXX object CMakeFiles/publisher.dir/src/publisher.cpp.o[0m
+[0.319s] [01m[K/home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/src/publisher.cpp:3:10:[m[K [01;31m[Kfatal error: [m[Knav_msgs/msg/odometry.hpp: No existe el archivo o el directorio
+[0.319s]     3 | #include [01;31m[K"nav_msgs/msg/odometry.hpp"[m[K // Per a la subscripció a /odom
+[0.319s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[0.319s] compilation terminated.
+[0.323s] gmake[2]: *** [CMakeFiles/publisher.dir/build.make:76: CMakeFiles/publisher.dir/src/publisher.cpp.o] Error 1
+[0.323s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/publisher.dir/all] Error 2
+[0.323s] gmake: *** [Makefile:146: all] Error 2
+[0.326s] Invoked command in '/home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/build/goals' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/build/goals -- -j6 -l6
