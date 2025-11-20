@@ -27,7 +27,7 @@ void odom_callback(const Odom::SharedPtr msg) {
         first_odom = false;
         last_x = x;
         last_y = y;
-        RCLCPP_INFO(rclcpp::get_logger("v2"), "Primer /odom recibido");
+        RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Primer /odom recibido");
         return;
     }
 
@@ -35,21 +35,21 @@ void odom_callback(const Odom::SharedPtr msg) {
     double dy = y - last_y;
     double dist = std::sqrt(dx*dx + dy*dy);
 
-    RCLCPP_INFO(rclcpp::get_logger("v2"), "Cambio en odom: %.6f m", dist);
+    RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Cambio en odom: %.6f m", dist);
 
     if (dist < 0.003) {
         stable_counter++;
-        RCLCPP_INFO(rclcpp::get_logger("v2"), "Robot detenido (%d/30)", stable_counter);
+        RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Robot detenido (%d/30)", stable_counter);
     } else {
         stable_counter = 0;
-        RCLCPP_INFO(rclcpp::get_logger("v2"), "Robot moviéndose");
+        RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Robot moviéndose");
     }
 
     last_x = x;
     last_y = y;
 
     if (stable_counter > 30) {
-        RCLCPP_INFO(rclcpp::get_logger("v2"), "Objetivo completado (según odom)");
+        RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Objetivo completado (según odom)");
         rclcpp::shutdown();
     }
 }
@@ -74,12 +74,21 @@ int main(int argc, char * argv[]) {
     goal_msg.pose.position.z = 0.0;
     goal_msg.pose.orientation = euler_to_quaternion(TARGET_YAW);
 
-    RCLCPP_INFO(node->get_logger(), "Publicando objetivo una sola vez: (%.3f, %.3f)", TARGET_X, TARGET_Y);
-    publisher->publish(goal_msg);
+    RCLCPP_INFO(node->get_logger(), "Publicando objetivo: (%.3f, %.3f)", TARGET_X, TARGET_Y);
 
-    RCLCPP_INFO(node->get_logger(), "Objetivo enviado. Escuchando /odom...");
+    rclcpp::sleep_for(std::chrono::milliseconds(500));
+    
+    bool inicio = true;
 
-    rclcpp::spin(node);
+    while (rclcpp::ok()) {
+        if (inicio) {
+              publisher->publish(goal_msg);
+              inicio = false;
+        }
+        RCLCPP_INFO(node->get_logger(), "Objetivo enviado, escuchando /odom...");
+        rclcpp::spin_some(node);
+        rclcpp::sleep_for(std::chrono::milliseconds(100));
+    }
 
     rclcpp::shutdown();
     return 0;
