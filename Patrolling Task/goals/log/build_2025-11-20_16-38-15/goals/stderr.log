@@ -1,0 +1,3 @@
+gmake[2]: *** [CMakeFiles/version2_publisher.dir/build.make:76: CMakeFiles/version2_publisher.dir/src/publisher.cpp.o] Interrupción
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/version2_publisher.dir/all] Interrupción
+gmake: *** [Makefile:146: all] Interrupción

@@ -1,0 +1,40 @@
+[0.000000] (-) TimerEvent: {}
+[0.000265] (goals) JobQueued: {'identifier': 'goals', 'dependencies': OrderedDict()}
+[0.001333] (goals) JobStarted: {'identifier': 'goals'}
+[0.081931] (goals) JobProgress: {'identifier': 'goals', 'progress': 'cmake'}
+[0.083875] (goals) JobProgress: {'identifier': 'goals', 'progress': 'build'}
+[0.085205] (goals) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/build/goals', '--', '-j4', '-l4'], 'cwd': '/home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/build/goals', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'es_ES:en'), ('USER', 'usuario'), ('LC_TIME', 'es_ES.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/local/cuda/lib64:'), ('__ETC_PROFILE_NIX_SOURCED', '1'), ('HOME', '/home/usuario'), ('OLDPWD', '/home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task'), ('DESKTOP_SESSION', 'ubuntu'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'es_ES.UTF-8'), ('NIX_PROFILES', '/nix/var/nix/profiles/default /home/usuario/.nix-profile'), ('SYSTEMD_EXEC_PID', '5119'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('LOGNAME', 'usuario'), ('_', '/usr/bin/colcon'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'usuario'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('PATH', '/home/usuario/.nix-profile/bin:/home/usuario/.local/bin:/usr/local/cuda/bin:/xilinx/Vitis_HLS/2022.2/bin/:/xilinx/Vivado/2022.2/bin/:/home/usuario/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/opt/core/venv/bin'), ('SESSION_MANAGER', 'local/labpro30.act.uji.es:@/tmp/.ICE-unix/2878,unix/labpro30.act.uji.es:/tmp/.ICE-unix/2878'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'es_ES.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/d3ac36c7_0c71_4f07_b687_48dbcc1f8317'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'es_ES.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'es_ES.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.S9NQF3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.155'), ('SSH_AGENT_LAUNCHER', 'openssh'), ('SSH_AUTH_SOCK', '/run/user/1000/openssh_agent'), ('SHELL', '/bin/bash'), ('LC_NAME', 'es_ES.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('NIX_SSL_CERT_FILE', '/etc/ssl/certs/ca-certificates.crt'), ('LC_MEASUREMENT', 'es_ES.UTF-8'), ('LC_IDENTIFICATION', 'es_ES.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/build/goals'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share:/usr/share:/home/usuario/.nix-profile/share:/nix/var/nix/profiles/default/share:/home/usuario/.nix-profile/share:/nix/var/nix/profiles/default/share:/home/usuario/.nix-profile/share:/nix/var/nix/profiles/default/share'), ('LC_NUMERIC', 'es_ES.UTF-8'), ('LC_PAPER', 'es_ES.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800')]), 'shell': False}
+[0.099575] (-) TimerEvent: {}
+[0.199847] (-) TimerEvent: {}
+[0.300134] (-) TimerEvent: {}
+[0.344566] (goals) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.400268] (-) TimerEvent: {}
+[0.500509] (-) TimerEvent: {}
+[0.600926] (-) TimerEvent: {}
+[0.701254] (-) TimerEvent: {}
+[0.801476] (-) TimerEvent: {}
+[0.829000] (goals) StderrLine: {'line': b'Traceback (most recent call last):\n'}
+[0.829172] (goals) StderrLine: {'line': b'  File "/opt/ros/humble/share/ament_cmake_core/cmake/package_templates/templates_2_cmake.py", line 21, in <module>\n'}
+[0.829247] (goals) StderrLine: {'line': b'    from ament_package.templates import get_environment_hook_template_path\n'}
+[0.829311] (goals) StderrLine: {'line': b"ModuleNotFoundError: No module named 'ament_package'\n"}
+[0.844591] (goals) StderrLine: {'line': b'\x1b[31mCMake Error at /opt/ros/humble/share/ament_cmake_core/cmake/ament_cmake_package_templates-extras.cmake:41 (message):\n'}
+[0.844762] (goals) StderrLine: {'line': b'  execute_process(/usr/bin/python3\n'}
+[0.844858] (goals) StderrLine: {'line': b'  /opt/ros/humble/share/ament_cmake_core/cmake/package_templates/templates_2_cmake.py\n'}
+[0.844934] (goals) StderrLine: {'line': b'  /home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling\n'}
+[0.845013] (goals) StderrLine: {'line': b'  Task/goals/build/goals/ament_cmake_package_templates/templates.cmake)\n'}
+[0.845082] (goals) StderrLine: {'line': b'  returned error code 1\n'}
+[0.845145] (goals) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.845206] (goals) StderrLine: {'line': b'  /opt/ros/humble/share/ament_cmake_core/cmake/ament_cmake_coreConfig.cmake:41 (include)\n'}
+[0.845267] (goals) StderrLine: {'line': b'  /opt/ros/humble/share/ament_cmake/cmake/ament_cmake_export_dependencies-extras.cmake:15 (find_package)\n'}
+[0.845328] (goals) StderrLine: {'line': b'  /opt/ros/humble/share/ament_cmake/cmake/ament_cmakeConfig.cmake:41 (include)\n'}
+[0.845387] (goals) StderrLine: {'line': b'  CMakeLists.txt:8 (find_package)\n'}
+[0.845447] (goals) StderrLine: {'line': b'\n'}
+[0.845507] (goals) StderrLine: {'line': b'\x1b[0m\n'}
+[0.845567] (goals) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[0.845647] (goals) StdoutLine: {'line': b'See also "/home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/build/goals/CMakeFiles/CMakeOutput.log".\n'}
+[0.874875] (goals) StderrLine: {'line': b'gmake: *** [Makefile:267: cmake_check_build_system] Error 1\n'}
+[0.877167] (goals) CommandEnded: {'returncode': 2}
+[0.901565] (-) TimerEvent: {}
+[1.001809] (-) TimerEvent: {}
+[1.028937] (goals) JobEnded: {'identifier': 'goals', 'rc': 2}
+[1.039514] (-) EventReactorShutdown: {}

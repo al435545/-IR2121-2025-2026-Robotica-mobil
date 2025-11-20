@@ -1,76 +1,86 @@
-int main(int argc, char * argv[]) { 
-    rclcpp::init(argc, argv); 
+#include "rclcpp/rclcpp.hpp"
+#include "geometry_msgs/msg/pose_stamped.hpp"
+#include "nav_msgs/msg/odometry.hpp"
+#include "tf2/LinearMath/Quaternion.h"
+#include "tf2_geometry_msgs/tf2_geometry_msgs.hpp"
+#include <cmath>
 
-    // NOTA: Cal utilitzar SharedPtr per a la neteja de recursos
-    rclcpp::Publisher<PoseStamped>::SharedPtr publisher;
-    rclcpp::Subscription<Odometry>::SharedPtr subscriber;
+using PoseStamped = geometry_msgs::msg::PoseStamped;
+using Odom = nav_msgs::msg::Odometry;
 
-    node = std::make_shared<rclcpp::Node>("version2_goal_publisher"); 
+geometry_msgs::msg::Quaternion euler_to_quaternion(double yaw) {
+    tf2::Quaternion q;
+    q.setRPY(0, 0, yaw);
+    return tf2::toMsg(q);
+}
 
-    publisher = node->create_publisher<PoseStamped>("/goal_pose", 1); 
+double last_x = 0.0;
+double last_y = 0.0;
+bool first_odom = true;
+int stable_counter = 0;
 
-    subscriber = node->create_subscription<Odometry>( 
-        "/odom", 10, odom_callback); 
+void odom_callback(const Odom::SharedPtr msg) {
+    double x = msg->pose.pose.position.x;
+    double y = msg->pose.pose.position.y;
 
-    double TARGET_X = -0.4019; 
-    double TARGET_Y = 7.59398; 
-    double TARGET_YAW = 0.0; 
+    if (first_odom) {
+        first_odom = false;
+        last_x = x;
+        last_y = y;
+        RCLCPP_INFO(rclcpp::get_logger("v2"), "Primer /odom recibido");
+        return;
+    }
 
-    const auto STOPPING_TIMEOUT = 7s;  
-    bool moving = false; // Comença a FALSE, esperant l'enviament inicial
+    double dx = x - last_x;
+    double dy = y - last_y;
+    double dist = std::sqrt(dx*dx + dy*dy);
 
-    // Corregim WallRate a Rate(10Hz) per a una detecció precisa
-    double loop_frequency = 10.0;
-    rclcpp::Rate loop_rate(loop_frequency); 
+    RCLCPP_INFO(rclcpp::get_logger("v2"), "Cambio en odom: %.6f m", dist);
 
-    auto goal_msg = PoseStamped(); 
-    goal_msg.header.frame_id = "map"; 
-    goal_msg.header.stamp = node->now();  
-    goal_msg.pose.position.x = TARGET_X; 
-    goal_msg.pose.position.y = TARGET_Y; 
-    goal_msg.pose.position.z = 0.0; 
-    goal_msg.pose.orientation = euler_to_quaternion(TARGET_YAW); 
+    if (dist < 0.003) {
+        stable_counter++;
+        RCLCPP_INFO(rclcpp::get_logger("v2"), "Robot detenido (%d/30)", stable_counter);
+    } else {
+        stable_counter = 0;
+        RCLCPP_INFO(rclcpp::get_logger("v2"), "Robot moviéndose");
+    }
 
-    RCLCPP_INFO(node->get_logger(), "Publicando objetivo a: (X: %.2f, Y: %.2f)", TARGET_X, TARGET_Y); 
+    last_x = x;
+    last_y = y;
 
-    RCLCPP_INFO(node->get_logger(), "Objetivo publicado. Esperando finalización..."); 
-    
-    bool inicio = true; // Estat per controlar si el goal ja s'ha publicat
+    if (stable_counter > 30) {
+        RCLCPP_INFO(rclcpp::get_logger("v2"), "Objetivo completado (según odom)");
+        rclcpp::shutdown();
+    }
+}
 
-    while(rclcpp::ok()) { 
+int main(int argc, char * argv[]) {
+    rclcpp::init(argc, argv);
 
-        rclcpp::spin_some(node); 
-        
-        // 1. LÒGICA D'INICI: Publica el goal una vegada
-        if (moving == false && inicio == true) { 
-            RCLCPP_INFO(node->get_logger(), "inicio: Publicando objetivo por primera vez.");
-            publisher->publish(goal_msg); 
-            moving = true; // El robot comença a moure's
-            inicio = false; // Ja no estem en la fase d'inici
-        }
+    auto node = std::make_shared<rclcpp::Node>("version2_goal_publisher");
 
-        // 2. LÒGICA DE DETECCIÓ DE PARADA (S'executa mentre el robot es mou)
-        if (moving == true && first_odom_received && (node->now() - last_change_time) > STOPPING_TIMEOUT) { 
-            RCLCPP_INFO(node->get_logger(), "7 segundos de inactividad detectados. Finalizando.");
-            moving = false; // Finalitza el moviment
-        } 
+    auto publisher = node->create_publisher<PoseStamped>("/goal_pose", 10);
+    auto subscriber = node->create_subscription<Odom>("/odom", 10, odom_callback);
 
-        // 3. LÒGICA DE FINALITZACIÓ: Surt del bucle quan el moviment ha acabat
-        if (moving == false && inicio == false) {
-             RCLCPP_INFO(node->get_logger(), "fin: El objetivo se considera alcanzado.");
-             break;
-        }
-          
-        loop_rate.sleep(); 
-    } 
+    double TARGET_X = -0.4019;
+    double TARGET_Y = 7.59398;
+    double TARGET_YAW = 0.0;
 
-    RCLCPP_INFO(node->get_logger(), "Objetivo alcanzado. Nodo finalizado."); 
+    PoseStamped goal_msg;
+    goal_msg.header.frame_id = "map";
+    goal_msg.header.stamp = node->now();
+    goal_msg.pose.position.x = TARGET_X;
+    goal_msg.pose.position.y = TARGET_Y;
+    goal_msg.pose.position.z = 0.0;
+    goal_msg.pose.orientation = euler_to_quaternion(TARGET_YAW);
 
-    // Correcció del Segmentation Fault: Neteja de recursos
-    publisher.reset();
-    subscriber.reset();
-    node.reset();
-    
-    rclcpp::shutdown(); 
-    return 0; 
+    RCLCPP_INFO(node->get_logger(), "Publicando objetivo una sola vez: (%.3f, %.3f)", TARGET_X, TARGET_Y);
+    publisher->publish(goal_msg);
+
+    RCLCPP_INFO(node->get_logger(), "Objetivo enviado. Escuchando /odom...");
+
+    rclcpp::spin(node);
+
+    rclcpp::shutdown();
+    return 0;
 }
