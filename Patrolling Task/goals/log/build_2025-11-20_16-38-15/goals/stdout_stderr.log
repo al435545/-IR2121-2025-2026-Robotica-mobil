@@ -1,5 +1,0 @@
-[35m[1mConsolidate compiler generated dependencies of target version2_publisher[0m
-[ 50%] [32mBuilding CXX object CMakeFiles/version2_publisher.dir/src/publisher.cpp.o[0m
-gmake[2]: *** [CMakeFiles/version2_publisher.dir/build.make:76: CMakeFiles/version2_publisher.dir/src/publisher.cpp.o] Interrupción
-gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/version2_publisher.dir/all] Interrupción
-gmake: *** [Makefile:146: all] Interrupción

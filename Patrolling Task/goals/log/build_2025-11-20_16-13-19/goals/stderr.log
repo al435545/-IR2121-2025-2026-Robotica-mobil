@@ -1,7 +1,0 @@
-[01m[K/home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/src/publisher.cpp:3:10:[m[K [01;31m[Kfatal error: [m[Knav2_msgs/action/navigate_to_pose.hpp: No existe el archivo o el directorio
-    3 | #include [01;31m[K"nav2_msgs/action/navigate_to_pose.hpp"[m[K
-      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
-compilation terminated.
-gmake[2]: *** [CMakeFiles/version2_publisher.dir/build.make:76: CMakeFiles/version2_publisher.dir/src/publisher.cpp.o] Error 1
-gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/version2_publisher.dir/all] Error 2
-gmake: *** [Makefile:146: all] Error 2
