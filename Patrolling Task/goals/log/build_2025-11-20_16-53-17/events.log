@@ -1,0 +1,177 @@
+[0.000000] (-) TimerEvent: {}
+[0.000418] (goals) JobQueued: {'identifier': 'goals', 'dependencies': OrderedDict()}
+[0.000486] (goals) JobStarted: {'identifier': 'goals'}
+[0.013022] (goals) JobProgress: {'identifier': 'goals', 'progress': 'cmake'}
+[0.015881] (goals) JobProgress: {'identifier': 'goals', 'progress': 'build'}
+[0.016955] (goals) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/build/goals', '--', '-j4', '-l4'], 'cwd': '/home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/build/goals', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'es_ES:en'), ('USER', 'usuario'), ('LC_TIME', 'es_ES.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda/lib64:'), ('__ETC_PROFILE_NIX_SOURCED', '1'), ('HOME', '/home/usuario'), ('OLDPWD', '/home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'es_ES.UTF-8'), ('NIX_PROFILES', '/nix/var/nix/profiles/default /home/usuario/.nix-profile'), ('SYSTEMD_EXEC_PID', '5119'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'usuario'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'usuario'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '1'), ('PATH', '/opt/ros/humble/bin:/home/usuario/.nix-profile/bin:/home/usuario/.local/bin:/usr/local/cuda/bin:/xilinx/Vitis_HLS/2022.2/bin/:/xilinx/Vivado/2022.2/bin/:/home/usuario/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/opt/core/venv/bin'), ('SESSION_MANAGER', 'local/labpro30.act.uji.es:@/tmp/.ICE-unix/2878,unix/labpro30.act.uji.es:/tmp/.ICE-unix/2878'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'es_ES.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/d3ac36c7_0c71_4f07_b687_48dbcc1f8317'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'es_ES.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'es_ES.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.S9NQF3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.155'), ('SSH_AGENT_LAUNCHER', 'openssh'), ('SSH_AUTH_SOCK', '/run/user/1000/openssh_agent'), ('AMENT_PREFIX_PATH', '/opt/ros/humble:/home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/install/goals'), ('SHELL', '/bin/bash'), ('LC_NAME', 'es_ES.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('NIX_SSL_CERT_FILE', '/etc/ssl/certs/ca-certificates.crt'), ('LC_MEASUREMENT', 'es_ES.UTF-8'), ('LC_IDENTIFICATION', 'es_ES.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/build/goals'), ('TURTLEBOT3_MODEL', 'burger'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share:/usr/share:/home/usuario/.nix-profile/share:/nix/var/nix/profiles/default/share:/home/usuario/.nix-profile/share:/nix/var/nix/profiles/default/share:/home/usuario/.nix-profile/share:/nix/var/nix/profiles/default/share'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'es_ES.UTF-8'), ('LC_PAPER', 'es_ES.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/install/goals:/opt/ros/humble')]), 'shell': False}
+[0.098705] (-) TimerEvent: {}
+[0.099848] (goals) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target version2_publisher\x1b[0m\n'}
+[0.133292] (goals) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/version2_publisher.dir/src/publisher.cpp.o\x1b[0m\n'}
+[0.198814] (-) TimerEvent: {}
+[0.299146] (-) TimerEvent: {}
+[0.399479] (-) TimerEvent: {}
+[0.499737] (-) TimerEvent: {}
+[0.599973] (-) TimerEvent: {}
+[0.700307] (-) TimerEvent: {}
+[0.800697] (-) TimerEvent: {}
+[0.901039] (-) TimerEvent: {}
+[1.001311] (-) TimerEvent: {}
+[1.101702] (-) TimerEvent: {}
+[1.201967] (-) TimerEvent: {}
+[1.302825] (-) TimerEvent: {}
+[1.403159] (-) TimerEvent: {}
+[1.503482] (-) TimerEvent: {}
+[1.603771] (-) TimerEvent: {}
+[1.704217] (-) TimerEvent: {}
+[1.804479] (-) TimerEvent: {}
+[1.904822] (-) TimerEvent: {}
+[2.005102] (-) TimerEvent: {}
+[2.105393] (-) TimerEvent: {}
+[2.205770] (-) TimerEvent: {}
+[2.306129] (-) TimerEvent: {}
+[2.406531] (-) TimerEvent: {}
+[2.506836] (-) TimerEvent: {}
+[2.607118] (-) TimerEvent: {}
+[2.707459] (-) TimerEvent: {}
+[2.807714] (-) TimerEvent: {}
+[2.908001] (-) TimerEvent: {}
+[3.008381] (-) TimerEvent: {}
+[3.108691] (-) TimerEvent: {}
+[3.209047] (-) TimerEvent: {}
+[3.309359] (-) TimerEvent: {}
+[3.409642] (-) TimerEvent: {}
+[3.509947] (-) TimerEvent: {}
+[3.610231] (-) TimerEvent: {}
+[3.710562] (-) TimerEvent: {}
+[3.810962] (-) TimerEvent: {}
+[3.911396] (-) TimerEvent: {}
+[4.011767] (-) TimerEvent: {}
+[4.112028] (-) TimerEvent: {}
+[4.212363] (-) TimerEvent: {}
+[4.312656] (-) TimerEvent: {}
+[4.413104] (-) TimerEvent: {}
+[4.513462] (-) TimerEvent: {}
+[4.613804] (-) TimerEvent: {}
+[4.714209] (-) TimerEvent: {}
+[4.814724] (-) TimerEvent: {}
+[4.915058] (-) TimerEvent: {}
+[5.015310] (-) TimerEvent: {}
+[5.115695] (-) TimerEvent: {}
+[5.217881] (-) TimerEvent: {}
+[5.318220] (-) TimerEvent: {}
+[5.418524] (-) TimerEvent: {}
+[5.518949] (-) TimerEvent: {}
+[5.619239] (-) TimerEvent: {}
+[5.719534] (-) TimerEvent: {}
+[5.819869] (-) TimerEvent: {}
+[5.920359] (-) TimerEvent: {}
+[6.020838] (-) TimerEvent: {}
+[6.121171] (-) TimerEvent: {}
+[6.221492] (-) TimerEvent: {}
+[6.321902] (-) TimerEvent: {}
+[6.422164] (-) TimerEvent: {}
+[6.522639] (-) TimerEvent: {}
+[6.623541] (-) TimerEvent: {}
+[6.723892] (-) TimerEvent: {}
+[6.824235] (-) TimerEvent: {}
+[6.924618] (-) TimerEvent: {}
+[7.025174] (-) TimerEvent: {}
+[7.125414] (-) TimerEvent: {}
+[7.225771] (-) TimerEvent: {}
+[7.326059] (-) TimerEvent: {}
+[7.426389] (-) TimerEvent: {}
+[7.526749] (-) TimerEvent: {}
+[7.627071] (-) TimerEvent: {}
+[7.728594] (-) TimerEvent: {}
+[7.828817] (-) TimerEvent: {}
+[7.929130] (-) TimerEvent: {}
+[8.029505] (-) TimerEvent: {}
+[8.129820] (-) TimerEvent: {}
+[8.230152] (-) TimerEvent: {}
+[8.330433] (-) TimerEvent: {}
+[8.430885] (-) TimerEvent: {}
+[8.531262] (-) TimerEvent: {}
+[8.631611] (-) TimerEvent: {}
+[8.732036] (-) TimerEvent: {}
+[8.832477] (-) TimerEvent: {}
+[8.933546] (-) TimerEvent: {}
+[9.033822] (-) TimerEvent: {}
+[9.134235] (-) TimerEvent: {}
+[9.234577] (-) TimerEvent: {}
+[9.334835] (-) TimerEvent: {}
+[9.435114] (-) TimerEvent: {}
+[9.535416] (-) TimerEvent: {}
+[9.635732] (-) TimerEvent: {}
+[9.735992] (-) TimerEvent: {}
+[9.836345] (-) TimerEvent: {}
+[9.936914] (-) TimerEvent: {}
+[10.037197] (-) TimerEvent: {}
+[10.137479] (-) TimerEvent: {}
+[10.237759] (-) TimerEvent: {}
+[10.338098] (-) TimerEvent: {}
+[10.438363] (-) TimerEvent: {}
+[10.538645] (-) TimerEvent: {}
+[10.638949] (-) TimerEvent: {}
+[10.739304] (-) TimerEvent: {}
+[10.839648] (-) TimerEvent: {}
+[10.940092] (-) TimerEvent: {}
+[11.040470] (-) TimerEvent: {}
+[11.140861] (-) TimerEvent: {}
+[11.241275] (-) TimerEvent: {}
+[11.341730] (-) TimerEvent: {}
+[11.442014] (-) TimerEvent: {}
+[11.542283] (-) TimerEvent: {}
+[11.642722] (-) TimerEvent: {}
+[11.743115] (-) TimerEvent: {}
+[11.843465] (-) TimerEvent: {}
+[11.948823] (-) TimerEvent: {}
+[12.049325] (-) TimerEvent: {}
+[12.149593] (-) TimerEvent: {}
+[12.249832] (-) TimerEvent: {}
+[12.350132] (-) TimerEvent: {}
+[12.450522] (-) TimerEvent: {}
+[12.526578] (goals) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable version2_publisher\x1b[0m\n'}
+[12.550636] (-) TimerEvent: {}
+[12.650911] (-) TimerEvent: {}
+[12.751258] (-) TimerEvent: {}
+[12.851498] (-) TimerEvent: {}
+[12.951798] (-) TimerEvent: {}
+[13.052191] (-) TimerEvent: {}
+[13.152854] (-) TimerEvent: {}
+[13.253252] (-) TimerEvent: {}
+[13.353583] (-) TimerEvent: {}
+[13.453839] (-) TimerEvent: {}
+[13.554250] (-) TimerEvent: {}
+[13.654519] (-) TimerEvent: {}
+[13.754813] (-) TimerEvent: {}
+[13.855565] (-) TimerEvent: {}
+[13.955875] (-) TimerEvent: {}
+[14.056134] (-) TimerEvent: {}
+[14.156672] (-) TimerEvent: {}
+[14.254050] (goals) StdoutLine: {'line': b'[100%] Built target version2_publisher\n'}
+[14.256741] (-) TimerEvent: {}
+[14.269987] (goals) CommandEnded: {'returncode': 0}
+[14.270956] (goals) JobProgress: {'identifier': 'goals', 'progress': 'install'}
+[14.283916] (goals) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/build/goals'], 'cwd': '/home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/build/goals', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'es_ES:en'), ('USER', 'usuario'), ('LC_TIME', 'es_ES.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda/lib64:'), ('__ETC_PROFILE_NIX_SOURCED', '1'), ('HOME', '/home/usuario'), ('OLDPWD', '/home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'es_ES.UTF-8'), ('NIX_PROFILES', '/nix/var/nix/profiles/default /home/usuario/.nix-profile'), ('SYSTEMD_EXEC_PID', '5119'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'usuario'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'usuario'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '1'), ('PATH', '/opt/ros/humble/bin:/home/usuario/.nix-profile/bin:/home/usuario/.local/bin:/usr/local/cuda/bin:/xilinx/Vitis_HLS/2022.2/bin/:/xilinx/Vivado/2022.2/bin/:/home/usuario/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/opt/core/venv/bin'), ('SESSION_MANAGER', 'local/labpro30.act.uji.es:@/tmp/.ICE-unix/2878,unix/labpro30.act.uji.es:/tmp/.ICE-unix/2878'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'es_ES.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/d3ac36c7_0c71_4f07_b687_48dbcc1f8317'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'es_ES.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'es_ES.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.S9NQF3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.155'), ('SSH_AGENT_LAUNCHER', 'openssh'), ('SSH_AUTH_SOCK', '/run/user/1000/openssh_agent'), ('AMENT_PREFIX_PATH', '/opt/ros/humble:/home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/install/goals'), ('SHELL', '/bin/bash'), ('LC_NAME', 'es_ES.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('NIX_SSL_CERT_FILE', '/etc/ssl/certs/ca-certificates.crt'), ('LC_MEASUREMENT', 'es_ES.UTF-8'), ('LC_IDENTIFICATION', 'es_ES.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/build/goals'), ('TURTLEBOT3_MODEL', 'burger'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share:/usr/share:/home/usuario/.nix-profile/share:/nix/var/nix/profiles/default/share:/home/usuario/.nix-profile/share:/nix/var/nix/profiles/default/share:/home/usuario/.nix-profile/share:/nix/var/nix/profiles/default/share'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'es_ES.UTF-8'), ('LC_PAPER', 'es_ES.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/install/goals:/opt/ros/humble')]), 'shell': False}
+[14.294596] (goals) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[14.307133] (goals) StdoutLine: {'line': b'-- Installing: /home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/install/goals/lib/goals/version2_publisher\n'}
+[14.356867] (-) TimerEvent: {}
+[14.392642] (goals) StdoutLine: {'line': b'-- Set runtime path of "/home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/install/goals/lib/goals/version2_publisher" to ""\n'}
+[14.392913] (goals) StdoutLine: {'line': b'-- Up-to-date: /home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/install/goals/share/ament_index/resource_index/package_run_dependencies/goals\n'}
+[14.393161] (goals) StdoutLine: {'line': b'-- Up-to-date: /home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/install/goals/share/ament_index/resource_index/parent_prefix_path/goals\n'}
+[14.393998] (goals) StdoutLine: {'line': b'-- Up-to-date: /home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/install/goals/share/goals/environment/ament_prefix_path.sh\n'}
+[14.394229] (goals) StdoutLine: {'line': b'-- Up-to-date: /home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/install/goals/share/goals/environment/ament_prefix_path.dsv\n'}
+[14.394331] (goals) StdoutLine: {'line': b'-- Up-to-date: /home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/install/goals/share/goals/environment/path.sh\n'}
+[14.394421] (goals) StdoutLine: {'line': b'-- Up-to-date: /home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/install/goals/share/goals/environment/path.dsv\n'}
+[14.394489] (goals) StdoutLine: {'line': b'-- Up-to-date: /home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/install/goals/share/goals/local_setup.bash\n'}
+[14.394591] (goals) StdoutLine: {'line': b'-- Up-to-date: /home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/install/goals/share/goals/local_setup.sh\n'}
+[14.394657] (goals) StdoutLine: {'line': b'-- Up-to-date: /home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/install/goals/share/goals/local_setup.zsh\n'}
+[14.394741] (goals) StdoutLine: {'line': b'-- Up-to-date: /home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/install/goals/share/goals/local_setup.dsv\n'}
+[14.394809] (goals) StdoutLine: {'line': b'-- Installing: /home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/install/goals/share/goals/package.dsv\n'}
+[14.394979] (goals) StdoutLine: {'line': b'-- Up-to-date: /home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/install/goals/share/ament_index/resource_index/packages/goals\n'}
+[14.395420] (goals) StdoutLine: {'line': b'-- Up-to-date: /home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/install/goals/share/goals/cmake/goalsConfig.cmake\n'}
+[14.395610] (goals) StdoutLine: {'line': b'-- Up-to-date: /home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/install/goals/share/goals/cmake/goalsConfig-version.cmake\n'}
+[14.395707] (goals) StdoutLine: {'line': b'-- Up-to-date: /home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/install/goals/share/goals/package.xml\n'}
+[14.398268] (goals) CommandEnded: {'returncode': 0}
+[14.429836] (goals) JobEnded: {'identifier': 'goals', 'rc': 0}
+[14.430927] (-) EventReactorShutdown: {}

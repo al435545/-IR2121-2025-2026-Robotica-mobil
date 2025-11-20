@@ -84,6 +84,8 @@ int main(int argc, char * argv[]) {
         if (inicio) {
               publisher->publish(goal_msg);
               inicio = false;
+              RCLCPP_INFO(node->get_logger(), "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+              rclcpp::sleep_for(std::chrono::milliseconds(500));
         }
         RCLCPP_INFO(node->get_logger(), "Objetivo enviado, escuchando /odom...");
         rclcpp::spin_some(node);
