@@ -1,0 +1,26 @@
+[0.016s] Invoking command in '/home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/build/goals': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/build/goals -- -j4 -l4
+[0.086s] [35m[1mConsolidate compiler generated dependencies of target version2_publisher[0m
+[0.117s] [ 50%] [32mBuilding CXX object CMakeFiles/version2_publisher.dir/src/publisher.cpp.o[0m
+[11.427s] [100%] [32m[1mLinking CXX executable version2_publisher[0m
+[13.058s] [100%] Built target version2_publisher
+[13.073s] Invoked command in '/home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/build/goals' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/build/goals -- -j4 -l4
+[13.086s] Invoking command in '/home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/build/goals': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/build/goals
+[13.100s] -- Install configuration: ""
+[13.110s] -- Installing: /home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/install/goals/lib/goals/version2_publisher
+[13.201s] -- Set runtime path of "/home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/install/goals/lib/goals/version2_publisher" to ""
+[13.202s] -- Up-to-date: /home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/install/goals/share/ament_index/resource_index/package_run_dependencies/goals
+[13.202s] -- Up-to-date: /home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/install/goals/share/ament_index/resource_index/parent_prefix_path/goals
+[13.202s] -- Up-to-date: /home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/install/goals/share/goals/environment/ament_prefix_path.sh
+[13.202s] -- Up-to-date: /home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/install/goals/share/goals/environment/ament_prefix_path.dsv
+[13.202s] -- Up-to-date: /home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/install/goals/share/goals/environment/path.sh
+[13.202s] -- Up-to-date: /home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/install/goals/share/goals/environment/path.dsv
+[13.202s] -- Up-to-date: /home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/install/goals/share/goals/local_setup.bash
+[13.202s] -- Up-to-date: /home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/install/goals/share/goals/local_setup.sh
+[13.202s] -- Up-to-date: /home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/install/goals/share/goals/local_setup.zsh
+[13.202s] -- Up-to-date: /home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/install/goals/share/goals/local_setup.dsv
+[13.202s] -- Installing: /home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/install/goals/share/goals/package.dsv
+[13.202s] -- Up-to-date: /home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/install/goals/share/ament_index/resource_index/packages/goals
+[13.202s] -- Up-to-date: /home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/install/goals/share/goals/cmake/goalsConfig.cmake
+[13.202s] -- Up-to-date: /home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/install/goals/share/goals/cmake/goalsConfig-version.cmake
+[13.202s] -- Up-to-date: /home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/install/goals/share/goals/package.xml
+[13.207s] Invoked command in '/home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/build/goals' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/build/goals

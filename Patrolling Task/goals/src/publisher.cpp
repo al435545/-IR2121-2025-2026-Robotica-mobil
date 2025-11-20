@@ -7,6 +7,7 @@
 
 using PoseStamped = geometry_msgs::msg::PoseStamped;
 using Odom = nav_msgs::msg::Odometry;
+using namespace std::chrono_literals;
 
 geometry_msgs::msg::Quaternion euler_to_quaternion(double yaw) {
     tf2::Quaternion q;
@@ -39,7 +40,7 @@ void odom_callback(const Odom::SharedPtr msg) {
 
     if (dist < 0.003) {
         stable_counter++;
-        RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Robot detenido (%d/30)", stable_counter);
+        RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Robot detenido (%d/5)", stable_counter);
     } else {
         stable_counter = 0;
         RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Robot moviéndose");
@@ -48,7 +49,7 @@ void odom_callback(const Odom::SharedPtr msg) {
     last_x = x;
     last_y = y;
 
-    if (stable_counter > 30) {
+    if (stable_counter > 5) {
         RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Objetivo completado (según odom)");
         rclcpp::shutdown();
     }
@@ -56,6 +57,8 @@ void odom_callback(const Odom::SharedPtr msg) {
 
 int main(int argc, char * argv[]) {
     rclcpp::init(argc, argv);
+
+    rclcpp::WallRate loop_rate(2s);
 
     auto node = std::make_shared<rclcpp::Node>("version2_goal_publisher");
 
@@ -81,15 +84,14 @@ int main(int argc, char * argv[]) {
     bool inicio = true;
 
     while (rclcpp::ok()) {
+    	rclcpp::spin_some(node);
+        loop_rate.sleep();
         if (inicio) {
               publisher->publish(goal_msg);
               inicio = false;
-              RCLCPP_INFO(node->get_logger(), "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+              RCLCPP_INFO(node->get_logger(), "entro dentro del bucle de 1 vez");
               rclcpp::sleep_for(std::chrono::milliseconds(500));
         }
-        RCLCPP_INFO(node->get_logger(), "Objetivo enviado, escuchando /odom...");
-        rclcpp::spin_some(node);
-        rclcpp::sleep_for(std::chrono::milliseconds(100));
     }
 
     rclcpp::shutdown();
