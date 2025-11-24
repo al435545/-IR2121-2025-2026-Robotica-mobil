@@ -106,6 +106,8 @@ int main(int argc, char * argv[]) {
 	current_goal_msg.pose.position.z = 0.0;
         current_goal_msg.pose.orientation = euler_to_quaternion(TARGET_YAW);
         
+        loop_rate.sleep();
+        
 	if (inicio) {
               publisher->publish(current_goal_msg);
               inicio = false;
