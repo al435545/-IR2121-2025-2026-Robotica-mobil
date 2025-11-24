@@ -13,24 +13,22 @@ find_package(geometry_msgs REQUIRED)
 find_package(nav_msgs REQUIRED)
 find_package(tf2 REQUIRED)
 find_package(tf2_geometry_msgs REQUIRED)
-find_package(nav2_msgs REQUIRED)
 
-# Ejecutable
-add_executable(version2_publisher src/publisher.cpp)
+# Ejecutable (CAMBIA EL ARCHIVO SI TU CPP TIENE OTRO NOMBRE)
+add_executable(publisher src/publisher.cpp)
 
 # Vinculación de dependencias
-ament_target_dependencies(version2_publisher
+ament_target_dependencies(publisher
   rclcpp
   geometry_msgs
   nav_msgs
   tf2
   tf2_geometry_msgs
-  nav2_msgs
 )
 
 # Instalación
 install(TARGETS
-  version2_publisher
+  publisher
   DESTINATION lib/${PROJECT_NAME}
 )
 

@@ -4,6 +4,7 @@
 #include "tf2/LinearMath/Quaternion.h"
 #include "tf2_geometry_msgs/tf2_geometry_msgs.hpp"
 #include <cmath>
+#include <vector>
 
 using PoseStamped = geometry_msgs::msg::PoseStamped;
 using Odom = nav_msgs::msg::Odometry;
@@ -65,6 +66,9 @@ int main(int argc, char * argv[]) {
     auto publisher = node->create_publisher<PoseStamped>("/goal_pose", 10);
     auto subscriber = node->create_subscription<Odom>("/odom", 10, odom_callback);
 
+    // Las siguientes variables (TARGET_X, Y, YAW) y la creación del mensaje 'goal_msg' 
+    // están siendo reemplazadas por el bucle de 'vector_goals',
+    // pero se mantienen aquí si quieres publicarlas antes del bucle.
     double TARGET_X = -0.4019;
     double TARGET_Y = 7.59398;
     double TARGET_YAW = 0.0;
@@ -82,16 +86,40 @@ int main(int argc, char * argv[]) {
     rclcpp::sleep_for(std::chrono::milliseconds(500));
     
     bool inicio = true;
+    int indice = 0;
+    std::vector<std::vector<double>> vector_goals = {
+    {-0.40, 7.59, 0.0},
+    {-3.4, 2.55, 0.002},
+    {0.0364, -4.65, -0.009},
+    {-5.33, -0.781, -0.009}
+    };
 
     while (rclcpp::ok()) {
-    	rclcpp::spin_some(node);
-        loop_rate.sleep();
-        if (inicio) {
-              publisher->publish(goal_msg);
+        rclcpp::spin_some(node);
+	loop_rate.sleep();
+        
+        PoseStamped current_goal_msg;
+        current_goal_msg.header.frame_id = "map";
+        current_goal_msg.header.stamp = node->now();
+        current_goal_msg.pose.position.x = vector_goals[indice][0];
+        current_goal_msg.pose.position.y = vector_goals[indice][1];
+	current_goal_msg.pose.position.z = 0.0;
+        current_goal_msg.pose.orientation = euler_to_quaternion(TARGET_YAW);
+        
+	if (inicio) {
+              publisher->publish(current_goal_msg);
               inicio = false;
+              indice++;
               RCLCPP_INFO(node->get_logger(), "entro dentro del bucle de 1 vez");
               rclcpp::sleep_for(std::chrono::milliseconds(500));
         }
+
+        if (indice >= vector_goals.size()) {
+            indice = 0;
+        }
+        
+        rclcpp::sleep_for(std::chrono::milliseconds(500));
+        loop_rate.sleep();
     }
 
     rclcpp::shutdown();
