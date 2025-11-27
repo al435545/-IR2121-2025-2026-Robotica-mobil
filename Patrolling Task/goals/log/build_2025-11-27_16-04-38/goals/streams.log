@@ -1,0 +1,39 @@
+[0.024s] Invoking command in '/home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/build/goals': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/build/goals -- -j4 -l4
+[0.110s] [35m[1mConsolidate compiler generated dependencies of target publisher[0m
+[0.154s] [ 50%] [32mBuilding CXX object CMakeFiles/publisher.dir/src/publisher.cpp.o[0m
+[0.502s] [01m[K/home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/src/publisher.cpp:193:[m[K [01;31m[Kerror: [m[Kunterminated argument list invoking macro "RCLCPP_WARN"
+[0.502s]   193 | }
+[0.502s]       | 
+[3.857s] [01m[K/home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/src/publisher.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[3.857s] [01m[K/home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/src/publisher.cpp:133:17:[m[K [01;31m[Kerror: [m[K‘[01m[KRCLCPP_WARN[m[K’ was not declared in this scope
+[3.857s]   133 |                 [01;31m[KRCLCPP_WARN[m[K(node->get_logger(), "SIGUIENTES ODOM AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+[3.857s]       |                 [01;31m[K^~~~~~~~~~~[m[K
+[3.857s] [01m[K/home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/src/publisher.cpp:133:17:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ at end of input
+[3.857s] [01m[K/home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/src/publisher.cpp:131:30:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K{[m[K’
+[3.857s]   131 |             if (!first_odom) [01;36m[K{[m[K
+[3.857s]       |                              [01;36m[K^[m[K
+[3.857s] [01m[K/home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/src/publisher.cpp:133:17:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ at end of input
+[3.857s]   133 |                 [01;31m[KRCLCPP_WARN[m[K(node->get_logger(), "SIGUIENTES ODOM AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+[3.857s]       |                 [01;31m[K^~~~~~~~~~~[m[K
+[3.858s] [01m[K/home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/src/publisher.cpp:127:38:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K{[m[K’
+[3.858s]   127 |         if (!initial_goal_published) [01;36m[K{[m[K
+[3.858s]       |                                      [01;36m[K^[m[K
+[3.858s] [01m[K/home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/src/publisher.cpp:133:17:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ at end of input
+[3.858s]   133 |                 [01;31m[KRCLCPP_WARN[m[K(node->get_logger(), "SIGUIENTES ODOM AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+[3.858s]       |                 [01;31m[K^~~~~~~~~~~[m[K
+[3.858s] [01m[K/home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/src/publisher.cpp:122:26:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K{[m[K’
+[3.858s]   122 |     while (rclcpp::ok()) [01;36m[K{[m[K
+[3.858s]       |                          [01;36m[K^[m[K
+[3.858s] [01m[K/home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/src/publisher.cpp:111:9:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kindice[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[3.858s]   111 |     int [01;35m[Kindice[m[K = 0;
+[3.858s]       |         [01;35m[K^~~~~~[m[K
+[3.858s] [01m[K/home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/src/publisher.cpp:133:17:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ at end of input
+[3.858s]   133 |                 [01;31m[KRCLCPP_WARN[m[K(node->get_logger(), "SIGUIENTES ODOM AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+[3.858s]       |                 [01;31m[K^~~~~~~~~~~[m[K
+[3.858s] [01m[K/home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/src/publisher.cpp:77:35:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K{[m[K’
+[3.859s]    77 | int main(int argc, char * argv[]) [01;36m[K{[m[K
+[3.859s]       |                                   [01;36m[K^[m[K
+[7.405s] gmake[2]: *** [CMakeFiles/publisher.dir/build.make:76: CMakeFiles/publisher.dir/src/publisher.cpp.o] Error 1
+[7.405s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/publisher.dir/all] Error 2
+[7.405s] gmake: *** [Makefile:146: all] Error 2
+[7.408s] Invoked command in '/home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/build/goals' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/build/goals -- -j4 -l4
