@@ -1,0 +1,35 @@
+[01m[K/home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/src/publisher.cpp:123:49:[m[K [01;35m[Kwarning: [m[Kmissing terminating " character
+  123 |                 RCLCPP_WARN(node->get_logger(), [01;35m[K"[m[K
+      |                                                 [01;35m[K^[m[K
+[01m[K/home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/src/publisher.cpp:123:[m[K [01;31m[Kerror: [m[Kunterminated argument list invoking macro "RCLCPP_WARN"
+  123 |                 RCLCPP_WARN(node->get_logger(), "
+      | 
+[01m[K/home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/src/publisher.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/src/publisher.cpp:123:17:[m[K [01;31m[Kerror: [m[K‘[01m[KRCLCPP_WARN[m[K’ was not declared in this scope
+  123 |                 [01;31m[KRCLCPP_WARN[m[K(node->get_logger(), "
+      |                 [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/src/publisher.cpp:123:17:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ at end of input
+[01m[K/home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/src/publisher.cpp:107:35:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K{[m[K’
+  107 |             if (!first_amcl_pose) [01;36m[K{[m[K
+      |                                   [01;36m[K^[m[K
+[01m[K/home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/src/publisher.cpp:123:17:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ at end of input
+  123 |                 [01;31m[KRCLCPP_WARN[m[K(node->get_logger(), "
+      |                 [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/src/publisher.cpp:105:38:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K{[m[K’
+  105 |         if (!initial_goal_published) [01;36m[K{[m[K
+      |                                      [01;36m[K^[m[K
+[01m[K/home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/src/publisher.cpp:123:17:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ at end of input
+  123 |                 [01;31m[KRCLCPP_WARN[m[K(node->get_logger(), "
+      |                 [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/src/publisher.cpp:101:26:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K{[m[K’
+  101 |     while (rclcpp::ok()) [01;36m[K{[m[K
+      |                          [01;36m[K^[m[K
+[01m[K/home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/src/publisher.cpp:123:17:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ at end of input
+  123 |                 [01;31m[KRCLCPP_WARN[m[K(node->get_logger(), "
+      |                 [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/goals/src/publisher.cpp:64:35:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K{[m[K’
+   64 | int main(int argc, char * argv[]) [01;36m[K{[m[K
+      |                                   [01;36m[K^[m[K
+gmake[2]: *** [CMakeFiles/publisher.dir/build.make:76: CMakeFiles/publisher.dir/src/publisher.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/publisher.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2
