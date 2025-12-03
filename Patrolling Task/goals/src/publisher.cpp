@@ -1,140 +1,110 @@
+#include <chrono>
+#include <iostream>
+#include <cmath>
+#include <functional>
 #include "rclcpp/rclcpp.hpp"
 #include "geometry_msgs/msg/pose_stamped.hpp"
 #include "geometry_msgs/msg/pose_with_covariance_stamped.hpp"
-#include "tf2/LinearMath/Quaternion.h"
-#include "tf2_geometry_msgs/tf2_geometry_msgs.hpp"
-#include <cmath>
 #include <vector>
 
-using PoseStamped = geometry_msgs::msg::PoseStamped;
-using AmclPose = geometry_msgs::msg::PoseWithCovarianceStamped;
 using namespace std::chrono_literals;
 
-// Variables globales
-double last_x = 0.0;
-double last_y = 0.0;
-int stable_counter = 0;
-bool goal_achieved = false;
+// Constantes de Tolerancia para la Detección de Llegada
+const double DISTANCE_TOLERANCE = 0.4;
+const double ORIENTATION_TOLERANCE = 0.4;
+const double LOOP_FREQUENCY = 0.5; // 0.5 Hz (equivalente a WallRate(2s))
 
-// --- Funciones Auxiliares ---
-geometry_msgs::msg::Quaternion euler_to_quaternion(double yaw) {
-    tf2::Quaternion q;
-    q.setRPY(0, 0, yaw);
-    return tf2::toMsg(q);
+// Variables globales actualizadas por el callback
+double current_x = 0.0;
+double current_y = 0.0;
+double current_w = 1.0;
+
+/**
+ * @brief Callback para recibir la pose del robot desde /amcl_pose.
+ */
+void amcl_callback(const geometry_msgs::msg::PoseWithCovarianceStamped::SharedPtr msgAMCL)
+{
+    current_x = msgAMCL->pose.pose.position.x;
+    current_y = msgAMCL->pose.pose.position.y;
+    current_w = msgAMCL->pose.pose.orientation.w;
 }
 
-// --- Callback de AMCL Pose ---
-void amcl_callback(const AmclPose::SharedPtr msg) {
-    double x = msg->pose.pose.position.x;
-    double y = msg->pose.pose.position.y;
-
-    double dx = x - last_x;
-    double dy = y - last_y;
-    double dist = std::sqrt(dx*dx + dy*dy);
-
-    RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Cambio en amcl_pose: %.6f m", dist);
-
-    // Ajuste: tolerancia mayor y menos ciclos
-    if (dist < 0.05) {  // antes 0.003
-        stable_counter++;
-        RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Robot detenido (%d/15)", stable_counter);
-    } else {
-        stable_counter = 0;
-        RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Robot moviéndose");
-    }
-
-    last_x = x;
-    last_y = y;
-
-    if (stable_counter > 15) {  // antes 30
-        if (!goal_achieved) {
-            RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Objetivo completado (según amcl_pose)");
-            goal_achieved = true;
-        }
-    } else {
-        goal_achieved = false;
-    }
-}
-
-// --- Función Principal ---
-int main(int argc, char * argv[]) {
+int main(int argc, char *argv[])
+{
     rclcpp::init(argc, argv);
 
-    auto node = std::make_shared<rclcpp::Node>("version4_goal_publisher");
+    auto node = rclcpp::Node::make_shared ("waypoint_publisher_node");
 
-    auto publisher = node->create_publisher<PoseStamped>("/goal_pose", 10);
-    auto subscriber = node->create_subscription<AmclPose>("/amcl_pose", 10, amcl_callback);
+    auto publisher = node->create_publisher<geometry_msgs::msg::PoseStamped>("/goal_pose", 1);
 
-    rclcpp::WallRate loop_rate(100ms);
+    auto subscription =
+    node->create_subscription<geometry_msgs::msg::PoseWithCovarianceStamped>(
+        "/amcl_pose", 1, std::bind(amcl_callback, std::placeholders::_1));
+
+    geometry_msgs::msg::PoseStamped goal_message;
+    goal_message.header.frame_id = "map";
 
     std::vector<std::vector<double>> vector_goals = {
-        {-0.40, 7.59, 0.0},
-        {-5.7, 2.55, 0.002},
-        {0.0364, -4.65, -0.009},
-        {-5.33, -0.781, -0.009}
+        {-0.40, 7.59, 0.0, 0.0, 0.0, 0.0, 1.0},
+        {-5.7, 2.55, 0.002, 0.0, 0.0, 0.180, 0.983},
+        {0.0364, -4.65, -0.009, 0.0, 0.0, -0.830, 0.557},
+        {-5.33, -0.781, -0.009, 0.0, 0.0, -0.111, 0.993}
     };
 
-    int indice = 0;
-    bool initial_goal_published = false;
+    rclcpp::Rate loop_rate(LOOP_FREQUENCY);
 
-    rclcpp::sleep_for(std::chrono::seconds(2));
-    RCLCPP_INFO(node->get_logger(), "Iniciando secuencia de objetivos (v4 con amcl_pose).");
+    for (const auto& target_pose : vector_goals) {
 
-    while (rclcpp::ok()) {
-    	RCLCPP_INFO(node->get_logger(), "estoy en el while");
-        rclcpp::spin_some(node);
-        loop_rate.sleep();
+        // 1. Configurar el mensaje del objetivo
+        goal_message.pose.position.x = target_pose[0];
+        goal_message.pose.position.y = target_pose[1];
+        goal_message.pose.position.z = target_pose[2];
+        goal_message.pose.orientation.x = target_pose[3];
+        goal_message.pose.orientation.y = target_pose[4];
+        goal_message.pose.orientation.z = target_pose[5];
+        goal_message.pose.orientation.w = target_pose[6];
 
-        if (!initial_goal_published) {
-            // Publicar siempre el primer objetivo tras 2 segundos
-            double target_x = vector_goals[indice][0];
-            double target_y = vector_goals[indice][1];
-            double target_yaw = vector_goals[indice][2];
+        bool needs_publishing = true;
 
-            PoseStamped current_goal_msg;
-            current_goal_msg.header.frame_id = "map";
-            current_goal_msg.header.stamp = node->now();
-            current_goal_msg.pose.position.x = target_x;
-            current_goal_msg.pose.position.y = target_y;
-            current_goal_msg.pose.position.z = 0.0;
-            current_goal_msg.pose.orientation = euler_to_quaternion(target_yaw);
+        RCLCPP_INFO(node->get_logger(), "Estableciendo Objetivo: (%.2f, %.2f)", target_pose[0], target_pose[1]);
 
-            publisher->publish(current_goal_msg);
-            RCLCPP_WARN(node->get_logger(), "Publicando objetivo inicial #%d: (%.3f, %.3f, %.3f)", 
-                        indice + 1, target_x, target_y, target_yaw);
+        while (rclcpp::ok())
+        {
+          
+            rclcpp::spin_some(node);
+            loop_rate.sleep();
 
-            initial_goal_published = true;
-        } 
-        else if (goal_achieved) {
-            indice++;
-            if (indice >= vector_goals.size()) {
-                RCLCPP_INFO(node->get_logger(), "¡Todos los objetivos (%zu) completados! Finalizando.", vector_goals.size());
-                rclcpp::shutdown();
-                break;
+         
+            if (needs_publishing) {
+                goal_message.header.stamp = node->now();
+                RCLCPP_WARN(node->get_logger(), "Publicando objetivo en /goal_pose...");
+                publisher->publish(goal_message);
+                loop_rate.sleep();
+                needs_publishing = false;
             }
 
-            stable_counter = 0;
-            goal_achieved = false;
+            double dx = current_x - target_pose[0];
+            double dy = current_y - target_pose[1];
+            
+            double distance = std::sqrt(dx * dx + dy * dy);
+            
+            double orientation_diff = std::abs(current_w - target_pose[6]);
 
-            double target_x = vector_goals[indice][0];
-            double target_y = vector_goals[indice][1];
-            double target_yaw = vector_goals[indice][2];
+            if (distance < DISTANCE_TOLERANCE && orientation_diff < ORIENTATION_TOLERANCE) {
 
-            PoseStamped current_goal_msg;
-            current_goal_msg.header.frame_id = "map";
-            current_goal_msg.header.stamp = node->now();
-            current_goal_msg.pose.position.x = target_x;
-            current_goal_msg.pose.position.y = target_y;
-            current_goal_msg.pose.position.z = 0.0;
-            current_goal_msg.pose.orientation = euler_to_quaternion(target_yaw);
+                RCLCPP_INFO(node->get_logger(), "Robot ha arribat al destí: (%.2f, %.2f)", target_pose[0], target_pose[1]);
+                loop_rate.sleep();
+                break;
+            }
+            else {
+                RCLCPP_INFO(node->get_logger(), "Estat: Distància restant: %.2f m", distance);
+            }
 
-            publisher->publish(current_goal_msg);
-            RCLCPP_WARN(node->get_logger(), "Publicando objetivo #%d: (%.3f, %.3f, %.3f)", 
-                        indice + 1, target_x, target_y, target_yaw);
+            loop_rate.sleep();
         }
     }
 
+    RCLCPP_INFO(node->get_logger(), "Ruta completada. Tancant el node.");
     rclcpp::shutdown();
     return 0;
 }
-
