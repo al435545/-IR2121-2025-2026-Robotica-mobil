@@ -1,4 +1,0 @@
-source;share/goals/local_setup.bash
-source;share/goals/local_setup.dsv
-source;share/goals/local_setup.sh
-source;share/goals/local_setup.zsh
