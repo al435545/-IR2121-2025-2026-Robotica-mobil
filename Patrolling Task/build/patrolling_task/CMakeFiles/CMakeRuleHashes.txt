@@ -1,0 +1,2 @@
+# Hashes of file build rules.
+716b508ae6b56d5e27a548aaf102aded CMakeFiles/patrolling_task_uninstall

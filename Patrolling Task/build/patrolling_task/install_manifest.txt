@@ -1,0 +1,16 @@
+/home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/install/patrolling_task/lib/patrolling_task/publisher
+/home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/install/patrolling_task/share/ament_index/resource_index/package_run_dependencies/patrolling_task
+/home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/install/patrolling_task/share/ament_index/resource_index/parent_prefix_path/patrolling_task
+/home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/install/patrolling_task/share/patrolling_task/environment/ament_prefix_path.sh
+/home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/install/patrolling_task/share/patrolling_task/environment/ament_prefix_path.dsv
+/home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/install/patrolling_task/share/patrolling_task/environment/path.sh
+/home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/install/patrolling_task/share/patrolling_task/environment/path.dsv
+/home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/install/patrolling_task/share/patrolling_task/local_setup.bash
+/home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/install/patrolling_task/share/patrolling_task/local_setup.sh
+/home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/install/patrolling_task/share/patrolling_task/local_setup.zsh
+/home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/install/patrolling_task/share/patrolling_task/local_setup.dsv
+/home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/install/patrolling_task/share/patrolling_task/package.dsv
+/home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/install/patrolling_task/share/ament_index/resource_index/packages/patrolling_task
+/home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/install/patrolling_task/share/patrolling_task/cmake/patrolling_taskConfig.cmake
+/home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/install/patrolling_task/share/patrolling_task/cmake/patrolling_taskConfig-version.cmake
+/home/usuario/Documentos/GitHub/-IR2121-2025-2026-Robotica-mobil/Patrolling Task/install/patrolling_task/share/patrolling_task/package.xml
